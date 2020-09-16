@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ranz.dao.SysUserMapper">
+
+
+    <insert id="addSysUser" parameterType="com.ranz.pojo.SysUser">
+      insert into sys_user (name,age,user_name) values (#{name},#{age},#{user_name})
+    </insert>
+
+    <update id="updateSysUser" parameterType="com.ranz.pojo.SysUser">
+     update sys_user set name=#{name},age=#{age},user_name=#{user_name}) where id=#{id}
+    </update>
+
+    <update id="deleteSysUser" parameterType="int">
+      delete from sys_user where id=#{id}
+    </update>
+    
+    <select id="selectSysUser" resultType="com.ranz.pojo.SysUser" parameterType="int">
+        select * from sys_user where id=#{id}
+    </select>
+
+    <select id="queryAll" resultType="com.ranz.pojo.SysUser">
+        select * from sys_user
+    </select>
+</mapper>
