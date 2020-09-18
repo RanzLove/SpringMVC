@@ -3,6 +3,7 @@ package com.ranz.service;
 import com.ranz.dao.SysUserMapper;
 import com.ranz.pojo.SysUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @author: J.Flying
  * @create: 2020-09-16 11:42
  */
+@Service
 public class SysUserServiceImpl implements SysUserService {
 
 

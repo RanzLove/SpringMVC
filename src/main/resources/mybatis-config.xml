@@ -21,6 +21,6 @@
     <!--</environments>-->
 
     <mappers>
-        <mapper class="com.ranz.dao.SysUserMapper"/>
+        <mapper  class="com.ranz.dao.SysUserMapper"/>
     </mappers>
 </configuration>

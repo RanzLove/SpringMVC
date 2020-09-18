@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>个人数据</title>
   </head>
   <body>
-  $END$
+  <a href="${pageContext.request.contextPath}/sysUser/queryAll">点击进入个人数据</a>
   </body>
 </html>
