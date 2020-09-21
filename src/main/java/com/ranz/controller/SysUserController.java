@@ -37,4 +37,26 @@ public class SysUserController {
     }
 
 
+    @RequestMapping("/showAddModal")
+    public String showAddModal(){
+        System.out.println("跳转页面。。。。。。。。");
+        return "addSys";
+    }
+
+    @RequestMapping("/addSysUser")
+    public String addSysUser(SysUser sysUser){
+        int i = sysUserService.addSysUser(sysUser);
+        System.out.println("添加成功。。。。。。。。");
+        return "redirect:/sysUser/queryAll";
+    }
+
+
+    @RequestMapping("/deleteSysUser")
+    public String deleteSysUser(int id){
+        int i = sysUserService.deleteSysUser(id);
+        System.out.println("删除。。。。。。。。");
+        return "redirect:/sysUser/queryAll";
+    }
+
+
 }

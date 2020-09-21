@@ -5,7 +5,7 @@
 
 
     <insert id="addSysUser" parameterType="com.ranz.pojo.SysUser">
-      insert into sys_user (name,age,user_name) values (#{name},#{age},#{user_name})
+      insert into sys_user (name,age,user_name) values (#{name},#{age},#{userName})
     </insert>
 
     <update id="updateSysUser" parameterType="com.ranz.pojo.SysUser">

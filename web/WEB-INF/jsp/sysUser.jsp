@@ -14,7 +14,7 @@
 <body>
 <a>进去个人页面</a>
 
-
+<a href="${pageContext.request.contextPath}/sysUser/showAddModal">新增</a>
 <table>
     <thead>
     <tr>
@@ -27,6 +27,7 @@
     <tbody>
         <c:forEach var="bean" items="${list}">
            <tr>
+               <th><a href="${pageContext.request.contextPath}/sysUser/deleteSysUser?id=${bean.id}">删除</a></th>
                <th>${bean.id}</th>
                <th>${bean.name}</th>
                <th>${bean.age}</th>
