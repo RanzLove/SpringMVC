@@ -8,8 +8,16 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @program: springMVC
@@ -44,8 +52,17 @@ public class SysUserController {
     }
 
     @RequestMapping("/addSysUser")
-    public String addSysUser(SysUser sysUser){
+    public String addSysUser(@RequestParam("file") CommonsMultipartFile file, SysUser sysUser, HttpServletRequest request){
+
+
+
         int i = sysUserService.addSysUser(sysUser);
+        String filePath = "/Users/JFlying/tool/static/wukong/"+ file.getOriginalFilename();
+        try {
+            file.transferTo(new File(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("添加成功。。。。。。。。");
         return "redirect:/sysUser/queryAll";
     }

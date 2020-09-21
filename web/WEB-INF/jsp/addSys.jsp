@@ -17,7 +17,7 @@
 
 <table>
 
-    <form action="${pageContext.request.contextPath}/sysUser/addSysUser" method="post">
+    <form action="${pageContext.request.contextPath}/sysUser/addSysUser" enctype="multipart/form-data" method="post" >
 
         <label>姓名</label>
         <input type="text" name="name" >
@@ -25,6 +25,7 @@
         <input type="text" name="age" >
         <label>用户名</label>
         <input type="text" name="userName" >
+        <input type="file" name="file">
         <input type="submit" value="提交" >
 
 

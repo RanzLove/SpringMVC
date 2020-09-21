@@ -18,6 +18,7 @@
 <table>
     <thead>
     <tr>
+        <th>操作</th>
         <th>id</th>
         <th>name</th>
         <th>age</th>
